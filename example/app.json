@@ -1,0 +1,22 @@
+{
+  "name": "react-native-password-strength-meter-bar-example",
+  "displayName": "PasswordStrengthMeterBar Example",
+  "expo": {
+    "name": "react-native-password-strength-meter-bar-example",
+    "slug": "react-native-password-strength-meter-bar-example",
+    "description": "Example app for react-native-password-strength-meter-bar",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

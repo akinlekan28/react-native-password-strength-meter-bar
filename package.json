@@ -27,16 +27,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods",
-    "preinstall": "node scripts/pre-install.js",
-    "appium": "appium",
-    "build:android": "scripts/build-android.sh",
-    "build:ios": "scripts/build-ios.sh",
-    "test:android": "appium-helper --platform android",
-    "test:ios": "appium-helper --platform ios",
-    "test:local-e2e": "OS=both scripts/run-local-tests.sh",
-    "run-emulator:android": "scripts/run-android-emulator.sh",
-    "kill-emulator:android": "scripts/kill-android-emulator.sh"
+    "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
     "react-native",
@@ -70,11 +61,7 @@
     "react-native": "0.62.2",
     "react-test-renderer": "^17.0.1",
     "release-it": "^13.5.8",
-    "typescript": "^3.8.3",
-    "tape-async": "2.1.1",
-    "tipsi-appium-helper": "2.1.3",
-    "webdriverio": "4.7.1",
-    "appium": "1.8.1"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": "*",

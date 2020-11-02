@@ -1,7 +1,5 @@
 # react-native-password-strength-meter-bar
 
-[![Build Status](https://travis-ci.com/akinlekan28/react-native-password-strength-meter-bar.svg?token=mYfiLJxrEkoRBmqZ4ZzG&branch=main)](https://travis-ci.com/akinlekan28/react-native-password-strength-meter-bar)
-
 react-native-password-strength-meter-bar as the name implies is a component for showing password strength for iOS, Android and Expo workflow.
 
 This component library uses zxcvbn password strength estimation library and react-native-progress

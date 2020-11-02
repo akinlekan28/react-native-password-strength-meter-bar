@@ -7,7 +7,7 @@ It supports react version >= 0.60 and <= 0.59.
 
 - Component Demo
 
-![component demo](example/screen.png)
+![component demo](demo/screen.png)
 
 ## Installation
 

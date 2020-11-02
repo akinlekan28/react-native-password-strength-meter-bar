@@ -15,6 +15,7 @@ export default function PasswordStrengthMeterBar({
   const [testedResult, setTestedResult] = useState(0);
   const [color, setColor] = useState('#F25F5C');
   const [label, setLabel] = useState('');
+  const [firstMount, setFirstMount] = useState(0);
 
   const calculaterPercentage = (value) => {
     switch (value) {
@@ -72,13 +73,17 @@ export default function PasswordStrengthMeterBar({
     setResult(calculaterPercentage(testedResult));
     setLabel(calculateLabel(testedResult));
     setColor(calculateBarColor(testedResult));
+    setFirstMount(firstMount + 1);
 
+    return () => {
+      setFirstMount(0);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [password]);
 
   return (
     <View style={{ marginTop: 5 }}>
-      {testedResult > 0 ? (
+      {testedResult > 0 || firstMount > 1 ? (
         <>
           <ProgressBar
             progress={result}

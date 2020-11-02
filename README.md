@@ -5,6 +5,10 @@ react-native-password-strength-meter-bar as the name implies is a component for 
 This component library uses zxcvbn password strength estimation library and react-native-progress
 It supports react version >= 0.60 and <= 0.59.
 
+- Component Demo
+
+![component demo](example/screen.png)
+
 ## Installation
 
 Execute the command to install react-native-password-strength-meter-bar.

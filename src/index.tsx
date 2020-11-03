@@ -1,23 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
-import propTypes from 'prop-types';
 import ProgressBar from 'react-native-progress/Bar';
 import zxcvbn from 'zxcvbn';
 
-export default function PasswordStrengthMeterBar({
-  password,
-  radius,
-  height,
-  showStrenghtText,
-  unfilledColor,
-}) {
-  const [result, setResult] = useState(0);
-  const [testedResult, setTestedResult] = useState(0);
-  const [color, setColor] = useState('#F25F5C');
-  const [label, setLabel] = useState('');
-  const [firstMount, setFirstMount] = useState(0);
+interface Props {
+  password: string;
+  radius?: number;
+  height?: number;
+  showStrenghtText?: boolean;
+  unfilledColor?: string;
+}
 
-  const calculaterPercentage = (value) => {
+const PasswordStrengthMeterBar: React.FC<Props> = ({
+  password,
+  radius = 4,
+  height = 8,
+  showStrenghtText = true,
+  unfilledColor = '#F0F0F0',
+}) => {
+  const [result, setResult] = useState<number>(0);
+  const [testedResult, setTestedResult] = useState<number>(0);
+  const [color, setColor] = useState<string>('#F25F5C');
+  const [label, setLabel] = useState<string>('');
+  const [firstMount, setFirstMount] = useState<number>(0);
+
+  const calculaterPercentage = (value: number) => {
     switch (value) {
       case 0:
         return 0;
@@ -34,7 +41,7 @@ export default function PasswordStrengthMeterBar({
     }
   };
 
-  const calculateBarColor = (value) => {
+  const calculateBarColor = (value: number) => {
     switch (value) {
       case 0:
         return '#F25F5C';
@@ -51,7 +58,7 @@ export default function PasswordStrengthMeterBar({
     }
   };
 
-  const calculateLabel = (value) => {
+  const calculateLabel = (value: number) => {
     switch (value) {
       case 0:
         return 'Weak';
@@ -101,15 +108,6 @@ export default function PasswordStrengthMeterBar({
       )}
     </View>
   );
-}
-
-PasswordStrengthMeterBar.propTypes = {
-  password: propTypes.string.isRequired,
 };
 
-PasswordStrengthMeterBar.defaultProps = {
-  unfilledColor: '#F0F0F0',
-  radius: 4,
-  height: 8,
-  showStrenghtText: true,
-};
+export default PasswordStrengthMeterBar;

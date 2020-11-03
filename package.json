@@ -1,6 +1,6 @@
 {
   "name": "react-native-password-strength-meter-bar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "display password strength in progress bar",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,7 +32,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "expo",
+    "react-native-expo",
+    "password-strength-meter",
+    "password-strength-estimator"
   ],
   "repository": "https://github.com/akinlekan28/react-native-password-strength-meter-bar",
   "author": "Olalekan Akintola <akinlekan@gmail.com> (https://github.com/akinlekan28)",
@@ -49,6 +53,7 @@
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.19",
     "@types/react-native": "0.62.13",
+    "@types/react-test-renderer": "^16.9.3",
     "commitlint": "^8.3.5",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -141,7 +146,6 @@
     ]
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react-native-progress": "^4.1.2",
     "zxcvbn": "^4.4.2"
   }
